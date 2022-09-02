@@ -8,3 +8,10 @@ def map(request) :
         'restaurants' : restaurants
     }
     return render(request, 'pages/main.html', context)
+
+def map2(request) :
+    restaurants = Restaurant.objects.all()
+    context = {
+        'restaurants' : restaurants
+    }
+    return render(request, 'pages/sub.html', context)
