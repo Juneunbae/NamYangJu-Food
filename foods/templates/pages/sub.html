@@ -61,9 +61,11 @@
                     return function() {
                         infowindow.open(map, marker);
                         infos.forEach(function(each) { each.close(); });
+                        infowindow.close
                     };
                     
                 }
+                
             }
 		{% endfor %}
 	</script>

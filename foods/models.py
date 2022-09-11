@@ -14,6 +14,7 @@ class Restaurant(models.Model) :
         return (f"{self.id}번 : {self.title}")
     
 class check(models.Model) :
-    check_id = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    description = models.TextField()
     complete = models.BooleanField(default=False)
     
